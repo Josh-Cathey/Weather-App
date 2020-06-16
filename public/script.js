@@ -1,0 +1,1 @@
+const searchElement = document.querySelector('[data-city-search]')
