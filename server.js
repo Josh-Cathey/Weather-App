@@ -1,18 +1,18 @@
 if (process.env.NODE_ENV != 'production') {
-    require('dotenv').config()
+    require('dotenv').config();
 }
 
-const ACCUWEATHER_API_KEY = process.env.ACCUWEATHER_API_KEY
-const express = require('express')
-const app = express()
+const ACCUWEATHER_API_KEY = process.env.ACCUWEATHER_API_KEY;
+const express = require('express');
+const app = express();
 
-app.use(express.json())
-app.use(express.static('public'))
+app.use(express.json());
+app.use(express.static('public'));
 
 app.post('/weather', (req, res) => {
-
+    console.log(req.body);
 })
 
 app.listen(3000, () => {
-    console.log('Server Started')
+    console.log('Server Started');
 })
